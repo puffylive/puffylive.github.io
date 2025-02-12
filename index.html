@@ -2,11 +2,56 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="0; url=home.html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redirecting...</title>
+    <title>Unblocked Games</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            background-color: #1e1e2e;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            margin: 20px 0;
+            font-size: 2.5em;
+        }
+        .game-list {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            padding: 20px;
+        }
+        .game-list button {
+            padding: 12px 20px;
+            font-size: 1.2em;
+            border: none;
+            background-color: #ff5733;
+            color: white;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: background 0.3s ease;
+        }
+        .game-list button:hover {
+            background-color: #c70039;
+        }
+        iframe {
+            width: 90%;
+            height: 600px;
+            margin-top: 30px;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+        }
+    </style>
 </head>
 <body>
-    <p>If you are not redirected, <a href="home.html">click here</a>.</p>
+    <h1>Unblocked Games Hub</h1>
+    <div class="game-list">
+        <button onclick="location.href='soccer_random.html'">Soccer Random</button>
+    </div>
+    <iframe id="game-frame" src="" allowfullscreen></iframe>
 </body>
 </html>
