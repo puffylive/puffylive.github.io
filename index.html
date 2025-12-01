@@ -3,55 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Unblocked Games</title>
+    <title>Dailymotion Video Player</title>
     <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            text-align: center;
-            background-color: #1e1e2e;
-            color: white;
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
-        h1 {
-            margin: 20px 0;
-            font-size: 2.5em;
-        }
-        .game-list {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 15px;
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
             padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
-        .game-list button {
-            padding: 12px 20px;
-            font-size: 1.2em;
-            border: none;
-            background-color: #ff5733;
-            color: white;
-            cursor: pointer;
+        
+        .container {
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+        }
+        
+        .video-container {
+            background: white;
             border-radius: 8px;
-            transition: background 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            margin-bottom: 20px;
         }
-        .game-list button:hover {
-            background-color: #c70039;
+        
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
         }
-        iframe {
-            width: 90%;
-            height: 600px;
-            margin-top: 30px;
+        
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             border: none;
-            border-radius: 10px;
-            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+        }
+        
+        .content {
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 15px;
         }
     </style>
 </head>
 <body>
-    <h1>Unblocked Games Hub</h1>
-    <div class="game-list">
-        <button onclick="location.href='soccer_random.html'">Soccer Random</button>
+    <div class="container">
+        <h1>Video Player</h1>
+        
+        <div class="video-container">
+            <div class="video-wrapper">
+                <iframe 
+                    src="https://geo.dailymotion.com/player.html?video=x9r6q2i"
+                    allowfullscreen 
+                    title="Dailymotion Video Player"
+                    allow="web-share">
+                </iframe>
+            </div>
+        </div>
+        
+        <div class="content">
+            <h2>About This Video</h2>
+            <p>This is an embedded Dailymotion video player. The video is hosted on Dailymotion's servers and played through their player.</p>
+            <p>The embed is responsive and will maintain its 16:9 aspect ratio on all screen sizes.</p>
+        </div>
     </div>
-    <iframe id="game-frame" src="" allowfullscreen></iframe>
 </body>
 </html>
